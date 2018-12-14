@@ -10,12 +10,12 @@ enabled=1
 2. Install packages  
 yum install atomic docker
 
-3. Disable selinux
-setenforce 0
+3. Disable selinux  
+setenforce 0  
 
-4. Enable and start docker service
-systemctl enabled docker
-systemctl restart docker
+4. Enable and start docker service  
+systemctl enabled docker  
+systemctl restart docker  
 
-5. Create docker image
-sh  run.sh  -y /root/neokylin-docker/yum.conf neokylin7.4
+5. Create docker image  
+sh  run.sh  -y /root/neokylin-docker/yum.conf neokylin7.4  
