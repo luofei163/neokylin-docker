@@ -19,3 +19,17 @@ systemctl restart docker
 
 5. Create docker image  
 sh  run.sh  -y /root/neokylin-docker/yum.conf neokylin7.4  
+
+Create docker image with other pkg
+sh  run.sh -p "koji-builder" -y /root/dock_base_image/yum.conf neokylin7.4-koji-builder
+
+Run docker 
+docker run -itd neokylin7.4-koji-builder:7 /bin/bash
+docker attach xxxxxxx
+
+
+6. Save docker image to local file
+docker save neokylin7.4-koji-builder -o neokylin7.4-koji-builder
+
+Other machine import docker file
+docker load -i neokylin7.4-koji-builder
